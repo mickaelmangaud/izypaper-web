@@ -9,8 +9,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Ubuntu', sans-serif;
   }
 
-  body {
+  html, body {
     background-color: #eee;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
 
   button {
@@ -24,6 +27,8 @@ export const rotate = keyframes`
 `;
 
 export const PageWrapper = styled.div`
+  width: 100vw;
+  position: asbolute;
   background-color: #eee;
   height: ${({theme}) => `calc(100vh - ${theme.sizes.menuHeight})`};
   margin-top: ${({theme}) => theme.sizes.menuHeight};

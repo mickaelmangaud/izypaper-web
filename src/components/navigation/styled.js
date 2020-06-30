@@ -1,21 +1,22 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: ${props => props.theme.colors.primary};
-    height: ${({theme}) => theme.sizes.menuHeight};
-    width: 100%;
-    position: fixed;
-    top: 0;
-    box-shadow: 1px 1px 5px 2px rgba(80,80,80, .4);
-    border: none;
-    /* z-index: 10; */
-    @media (max-width: 860px) {
-      height:${({theme}) => theme.sizes.mobileMenuHeight};
-    }
-  `;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${props => props.theme.colors.primary};
+  height: ${({theme}) => theme.sizes.menuHeight};
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  box-shadow: 1px 1px 5px 2px rgba(80,80,80, .4);
+  border: none;
+  /* z-index: 10; */
+  @media (max-width: 860px) {
+    height:${({theme}) => theme.sizes.mobileMenuHeight};
+  }
+`;
 
 export const Logo = styled.div`
   display: flex;
