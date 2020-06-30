@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Izylegal`,
-        short_name: `Izylegal`,
+        name: `IzyPaper`,
+        short_name: `IzyPaper`,
         start_url: `/`,
         background_color: `#048b9a`,
         theme_color: `#048b9a`,
@@ -22,8 +22,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/*`],
-      }
+        workboxConfig: {
+           globPatterns: ['**/*']
+        }
+     }
     },
   ],
 }
