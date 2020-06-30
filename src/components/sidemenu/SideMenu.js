@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SideMenuWrapper = styled.div`
+  display: none;  
+
   z-index: 10;
   position: absolute;
   top: 0;
