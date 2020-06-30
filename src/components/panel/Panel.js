@@ -20,7 +20,7 @@ const Panel = styled.div`
     height: ${({theme}) => `calc(100vh - 120px - ${theme.sizes.mobileMenuHeight})`};
     right: 5vw;
   }
-`;
+`;         
 
 export default ({ isVisible, setVisible }) => {
   return (
