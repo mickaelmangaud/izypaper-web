@@ -1,14 +1,9 @@
 import styled from 'styled-components';
 
 export const BurgerWrapper = styled.div`
-  /* background-color: red; */
   z-index: 100;
-  /* position: relative; */
-  /* top: 22px; */
-  /* left: 18px; */
   min-width: ${({theme}) => theme.sizes.mobileMenuHeight};
   height: ${({theme}) => theme.sizes.mobileMenuHeight};
-  /* transform: scale(.7); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +21,7 @@ export const BurgerWrapper = styled.div`
     opacity: 0;
     cursor: pointer;
     &:checked {
+      transform: translateX(-6px);
       + span {
         background: transparent;
         &:after {
@@ -40,10 +36,9 @@ export const BurgerWrapper = styled.div`
   span {
     position: absolute;
     z-index: 1000;
-    width: 36px;
+    width: 30px;
     height: 4px;
     background: #fff;
-    /* margin-top: 10px; */
     transition: all 0.1s;
     &:before, &:after {
       content: "";

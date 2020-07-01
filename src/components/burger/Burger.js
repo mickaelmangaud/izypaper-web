@@ -7,7 +7,7 @@ const Burger = ({ isSideMenuVisible }) => {
 
   return (
     <BurgerWrapper isVisible={isSideMenuVisible}>
-      <SideMenu isVisible={isSideMenuVisible} ref={sideMenuRef}/>
+      {/* <SideMenu isVisible={isSideMenuVisible} ref={sideMenuRef}/> */}
       <input type="checkbox" />
       <span></span>
     </BurgerWrapper>
