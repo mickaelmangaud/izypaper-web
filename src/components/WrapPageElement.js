@@ -12,9 +12,7 @@ export const WrapPageElement = ({ element }) => {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
       </Helmet>
-      {/* <Burger /> */}
       <Navigation />
-      {/* <SideMenu /> */}
       {element}
     </React.Fragment>
   )
