@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const BurgerWrapper = styled.div`
+  /* transform: scale(1, .8); */
   z-index: 100;
-  min-width: ${({theme}) => theme.sizes.mobileMenuHeight};
   height: ${({theme}) => theme.sizes.mobileMenuHeight};
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   @media (min-width: 860px) {
     display: none;
   }
