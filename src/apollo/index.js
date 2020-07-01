@@ -14,7 +14,7 @@ class AppolloWrapper extends React.Component {
     const client = new ApolloClient({
       cache: cache,
       link: new HttpLink({
-        uri: 'http://localhost:5000/graphql',
+        uri: 'https://izypaper-backend.herokuapp.com/graphql',
         credentials: 'include'
       })
     });
