@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { Context } from '../../context';
 
 const Panel = styled.div`
   background-color: white;
@@ -22,9 +23,11 @@ const Panel = styled.div`
   }
 `;         
 
-export default ({ isVisible, setVisible }) => {
+export default () => {
+  const {context, setContext} = useContext(Context);
+
   return (
-    <Panel isVisible={isVisible}>
+    <Panel isVisible={context.menuOpen}>
       Infos
     </Panel>
   )

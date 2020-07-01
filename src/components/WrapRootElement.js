@@ -1,11 +1,14 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styled';
+import { ContextProvider } from '../context';
 
 export const WrapRootElement = ({ element }) => {
   return (
-    <ThemeProvider theme={theme}>
-      {element}
-    </ThemeProvider>
+    <ContextProvider>
+      <ThemeProvider theme={theme}>
+        {element}
+      </ThemeProvider>
+    </ContextProvider>
   )
 }

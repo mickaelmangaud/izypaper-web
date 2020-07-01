@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
+import { Context } from '../../context';
 
 const Navigation = () => {
   const location = useLocation();
+  const { context, setContext } = useContext(Context);
+
+  const togglePanel = () => setContext({ ...context, menuOpen: !context.menuOpen });
 
   return (
     <Wrapper>
@@ -26,7 +30,8 @@ const Navigation = () => {
       <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
 
       <App>
-        <span 
+        <span
+          onClick={togglePanel}
           className="material-icons">
             account_circle
         </span>
