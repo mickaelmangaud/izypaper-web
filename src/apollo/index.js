@@ -38,7 +38,7 @@ class AppolloWrapper extends React.Component {
     const { client, loaded } = this.state;
 
     if (!loaded) {
-      return <div>Loading...</div>;
+      return <div>Loading appollo cache...</div>;
     }
 
     return (
