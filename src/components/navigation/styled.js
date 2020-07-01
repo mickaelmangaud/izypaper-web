@@ -69,7 +69,7 @@ export const App = styled.div`
     cursor: pointer;
     transition: all .2s ease;
     @media (max-width: 860px) {
-      font-size: 42px;
+      font-size: 48px;
     }
     &:hover {
       background-color: white;
