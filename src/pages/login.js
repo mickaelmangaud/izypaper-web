@@ -23,13 +23,14 @@ const Login = () => {
       navigate('/')
       // Mettre le user dans le contexte
     } catch (error) {
-      setError(error)
+      setError(error.message)
     }
   }
 
   return (
     <PageWrapper>
       <form onSubmit={submitLogin}>
+        {error && <p>{error}</p>}
         <input 
           type="email" 
           value={formFields.email} 
