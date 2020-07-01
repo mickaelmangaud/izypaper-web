@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.div`
+  margin-right: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
