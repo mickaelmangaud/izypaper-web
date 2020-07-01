@@ -19,13 +19,13 @@ module.exports = {
         display: `standalone`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-           globPatterns: ['**/*']
-        }
-     }
+    // {
+    //   resolve: `gatsby-plugin-offline`,
+    //   options: {
+    //     workboxConfig: {
+    //        globPatterns: ['**/*']
+    //     }
+    //  }
     },
   ],
 }
