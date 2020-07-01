@@ -70,6 +70,7 @@ export const App = styled.div`
     transition: all .2s ease;
     @media (max-width: 860px) {
       font-size: 48px;
+      margin-right: 18px;
     }
     &:hover {
       background-color: white;
