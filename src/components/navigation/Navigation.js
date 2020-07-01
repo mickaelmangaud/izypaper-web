@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
 
 const Navigation = () => {
@@ -23,7 +23,7 @@ const Navigation = () => {
           </MenuItem>
         )}
       </Menu>
-      <NavButton>Connexion</NavButton>
+      <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
 
       <App>
         <span 
