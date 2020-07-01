@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
+import React, {  useRef, useEffect, useState } from 'react';
 import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { Context } from '../../context';
+import { Panel } from '../panel';
 
 const Navigation = () => {
   const location = useLocation();
-  const { context, setContext } = useContext(Context);
+  const [isPanelVisible, setIsPanelVisible] = useState(false);
+  const panelRef = useRef(null);
+  const handleTogglePanel = () => setIsPanelVisible(!isPanelVisible);
 
-  const togglePanel = () => setContext({ ...context, menuOpen: !context.menuOpen });
+  useEffect(() => {
+    const handleClickOutside = (e) => panelRef.current && !panelRef.current.contains(e.target) && setIsPanelVisible(false);
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('clic', handleClickOutside);
+  }, [panelRef]);
 
   return (
     <Wrapper>
@@ -27,14 +33,14 @@ const Navigation = () => {
           </MenuItem>
         )}
       </Menu>
+      
       <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
 
-      <App>
-        <span
-          onClick={togglePanel}
-          className="material-icons">
+      <App ref={panelRef}>
+        <span className="material-icons" onClick={handleTogglePanel}>
             account_circle
         </span>
+        <Panel isVisible={isPanelVisible}/>
       </App>
     </Wrapper>
   )
