@@ -1,6 +1,12 @@
 import React from 'react';
 import { IndexPageWrapper } from '../styled';
 
+if(typeof window !== undefined) {
+  console.log('navigateur')
+} else {
+  console.log('serveur')
+}
+
 export const Index = () => {
   return (
     <IndexPageWrapper>
