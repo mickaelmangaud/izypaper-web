@@ -3,22 +3,31 @@ import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { Panel } from '../panel';
+import { Panel, Burger } from '..';
 
 const Navigation = () => {
   const location = useLocation();
   const [isPanelVisible, setIsPanelVisible] = useState(false);
+  const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
   const panelRef = useRef(null);
+
   const handleTogglePanel = () => setIsPanelVisible(!isPanelVisible);
+  const toggleSideMenuVisible = () => {
+    console.log('setIsSideMenuVisible(true)')
+    setIsSideMenuVisible(!isSideMenuVisible)
+  };
 
   useEffect(() => {
     const handleClickOutside = (e) => panelRef.current && !panelRef.current.contains(e.target) && setIsPanelVisible(false);
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('clic', handleClickOutside);
   }, [panelRef]);
-
+  
   return (
     <Wrapper>
+      <div onClick={toggleSideMenuVisible}>
+        <Burger isSideMenuVisible={isSideMenuVisible} />
+      </div>
       <Logo>
         <span className="material-icons">attach_file</span>
         <Link to={'/'}>IzyPaper</Link>

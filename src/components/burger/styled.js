@@ -1,23 +1,27 @@
 import styled from 'styled-components';
 
 export const BurgerWrapper = styled.div`
+  /* background-color: red; */
   z-index: 100;
-  position: absolute;
-  top: 22px;
-  left: 18px;
-  width: 36px;
-  height: 36px;
-  transform: scale(.7);
+  /* position: relative; */
+  /* top: 22px; */
+  /* left: 18px; */
+  min-width: ${({theme}) => theme.sizes.mobileMenuHeight};
+  height: ${({theme}) => theme.sizes.mobileMenuHeight};
+  /* transform: scale(.7); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (min-width: 860px) {
     display: none;
   }
 
   input {
     position: absolute;
-    top: -3px;
+    top: -7px;
     left: -3px;
-    width: 100%;
-    height: 100%;
+    width: ${({theme}) => theme.sizes.mobileMenuHeight};
+    height: 80%;
     z-index: 100000000000;
     opacity: 0;
     cursor: pointer;
@@ -35,17 +39,18 @@ export const BurgerWrapper = styled.div`
   }
   span {
     position: absolute;
-    width: 100%;
+    z-index: 1000;
+    width: 36px;
     height: 4px;
-    background: #000;
-    margin-top: 10px;
+    background: #fff;
+    /* margin-top: 10px; */
     transition: all 0.1s;
     &:before, &:after {
       content: "";
       position: absolute;
       width: 100%;
       height: 4px;
-      background: #fff;
+      background: ${({isVisible, theme}) => isVisible ? theme.colors.primary : '#fff'};
       top: -12px;
       transition: all 0.3s;
     }

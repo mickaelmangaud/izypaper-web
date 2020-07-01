@@ -1,9 +1,13 @@
-import React from 'react';
+import React,{ useRef, useEffect } from 'react';
 import { BurgerWrapper } from './styled';
+import { SideMenu } from '..';
 
-const Burger = () => {
+const Burger = ({ isSideMenuVisible }) => {
+  const sideMenuRef = useRef();
+
   return (
-    <BurgerWrapper onClick={() => console.log('burger clicked')}>
+    <BurgerWrapper isVisible={isSideMenuVisible}>
+      <SideMenu isVisible={isSideMenuVisible} ref={sideMenuRef}/>
       <input type="checkbox" />
       <span></span>
     </BurgerWrapper>

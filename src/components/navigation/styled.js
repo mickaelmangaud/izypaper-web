@@ -29,7 +29,7 @@ export const Logo = styled.div`
   @media (max-width: 860px) {
     width: 100%;
     .material-icons {
-      margin-left: ${({theme}) => '65px'};
+      /* margin-left: ${({theme}) => '65px'}; */
     }
   }
 

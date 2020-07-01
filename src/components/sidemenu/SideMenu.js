@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SideMenuWrapper = styled.div`
-  display: none;  
-
+  display: ${({ isVisible}) => isVisible ? 'block': 'none'};
   z-index: 10;
   position: absolute;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 300px;
   background-color: white;
@@ -16,9 +16,9 @@ const SideMenuWrapper = styled.div`
   }
 `;
 
-const SideMenu = () => {
+const SideMenu = ({ isVisible }) => {
   return (
-    <SideMenuWrapper>
+    <SideMenuWrapper isVisible={isVisible}>
 
     </SideMenuWrapper>
   )
