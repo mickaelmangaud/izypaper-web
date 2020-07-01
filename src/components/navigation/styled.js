@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
   top: 0;
   box-shadow: 1px 1px 5px 2px rgba(80,80,80, .4);
   border: none;
-  padding: 0 24px;
   /* z-index: 10; */
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
@@ -20,10 +19,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Logo = styled.div`
-  margin-left: 16px;
+  margin-right: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 250px;
   font-family: 'Ubuntu', sans-serif;
   color: white;
   .material-icons { color: white; font-size: 36px }; 
@@ -56,17 +56,16 @@ export const Menu = styled.ul`
 `;
 
 export const App = styled.div`
-  width: 36px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: ${({theme}) => theme.sizes.menuHeight}; */
+  width: ${({theme}) => theme.sizes.menuHeight};
 
   .material-icons {
     border-radius: 50%;
     color: white;
-    font-size: 54px;
+    font-size: 48px;
     cursor: pointer;
     transition: all .2s ease;
     @media (max-width: 860px) {
