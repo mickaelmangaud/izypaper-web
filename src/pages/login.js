@@ -15,7 +15,7 @@ const Login = () => {
   const submitLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://izypaper-backend.herokuapp.com/auth/login', formFields,{
+      const response = await axios.post('https://izypaper-api.herokuapp.com/graphql', formFields,{
         withCredentials: true,
       });
       console.log(response.status)
