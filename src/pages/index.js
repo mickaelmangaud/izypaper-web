@@ -17,12 +17,12 @@ export const Index = () => {
 };
 
 const USERS_QUERY = gql`
-{
-  users {
-    id
-    email
+  {
+    users {
+      id
+      email
+    }
   }
-}
 `;
 
 export default Index;
