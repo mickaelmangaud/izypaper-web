@@ -1,6 +1,6 @@
 import React from 'react';
 import { GlobalStyle } from '../styled';
-import { Navigation, Burger, Panel, SideMenu } from './index';
+import { Navigation } from './index';
 import { Helmet } from 'react-helmet';
 
 export const WrapPageElement = ({ element }) => {

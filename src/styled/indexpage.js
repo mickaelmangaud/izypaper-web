@@ -10,9 +10,4 @@ export const IndexPageWrapper = styled(PageWrapper)`
   background-image: url(${background});
   background-position: center center;
   background-size: cover;
-
-  h1 {
-    margin-top: 200px;
-    font-size: 10vw;
-  }
 `;

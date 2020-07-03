@@ -8,6 +8,7 @@ const Login = () => {
     email: '',
     password: ''
   });
+  
   const [error, setError] = useState(null);
 
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value})

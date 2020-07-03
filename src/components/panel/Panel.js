@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Context } from '../../context';
 
 const Panel = styled.div`
   background-color: white;
