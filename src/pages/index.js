@@ -9,7 +9,7 @@ const HeroSection = styled.section`
 
   .left {
       flex: 1;
-      img { width: 100% }
+      img { width: 80% }
     }
 
   .right {
