@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
   top: 0;
   box-shadow: 1px 1px 5px 2px rgba(80,80,80, .4);
   border: none;
-  /* z-index: 10; */
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
   }
@@ -29,9 +28,6 @@ export const Logo = styled.div`
   .material-icons { color: white; font-size: 36px }; 
   @media (max-width: 860px) {
     width: 100%;
-    .material-icons {
-      /* margin-left: ${({theme}) => '65px'}; */
-    }
   }
 
   a {

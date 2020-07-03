@@ -8,8 +8,13 @@ const HeroSection = styled.section`
   display: flex;
 
   .left {
+      @media (max-width: 860px) {
+        display: none;
+      }
       flex: 1;
-      img { width: 95% }
+      img { 
+        width: 95%;
+      }
     }
 
   .right {
@@ -22,6 +27,9 @@ const HeroSection = styled.section`
     h1 {
       font-size: 6vw;
       margin-bottom: 36px;
+      @media (max-width: 860px) {
+        font-size: 16vw;
+      }
     }
 
     .description {
@@ -29,8 +37,12 @@ const HeroSection = styled.section`
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
       line-height: 2.5vw;
-      margin-bottom: 24px;
+      margin-bottom: 4vw;
       max-width:595px;
+      @media (max-width: 860px) {
+        font-size: 6vw;
+        line-height: 7vw;
+      }
     }
   }
 `;

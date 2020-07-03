@@ -28,7 +28,7 @@ export const rotate = keyframes`
 
 export const PageWrapper = styled.div`
   width: 100vw;
-  position: asbolute;
+  /* position: absolute; */
   background-color: #eee;
   height: ${({theme}) => `calc(100vh - ${theme.sizes.menuHeight})`};
   margin-top: ${({theme}) => theme.sizes.menuHeight};
