@@ -9,7 +9,7 @@ const HeroSection = styled.section`
 
   .left {
       flex: 1;
-      img { width: 80% }
+      img { width: 95% }
     }
 
   .right {
@@ -25,8 +25,10 @@ const HeroSection = styled.section`
     }
 
     .description {
-      font-size: 24px;
-      font-family: 'Nunito Sans', sans-serif;
+      font-size: 2vw;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      line-height: 2.5vw;
       margin-bottom: 24px;
       max-width:595px;
     }
