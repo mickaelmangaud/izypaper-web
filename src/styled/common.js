@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     user-select: none;
     font-family: 'Ubuntu', sans-serif;
+    outline: none;
   }
 
   html, body {
