@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { PageWrapper } from '../styled';
 
 const Register = () => {
-  const [user] = useState(null);
   const [error, setError] = useState(null);
   const [formFields, updateFormFields] = useState({
     email: '',
@@ -12,7 +11,7 @@ const Register = () => {
   
   const register = async (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/auth/register', {
+    fetch('https://izypaper-api.herokuapp.com/auth/register', {
       method: 'post',
       headers: {
         'Accept': 'application/json',

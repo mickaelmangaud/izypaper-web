@@ -78,6 +78,7 @@ export const App = styled.div`
 `;
 
 export const NavButton = styled.button`
+  white-space: nowrap;
   background-color: white;
   padding: 12px 18px;
   border: none;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import fetch from 'isomorphic-fetch';
-import { navigate } from 'gatsby';
 
 export const UserContext = React.createContext(null);
 
@@ -13,19 +12,15 @@ const UserContextProvider = ({ children }) => {
 
   useEffect(() => {
     const getUserData = async () => {
-      fetch('http://localhost:5000/auth/user', {
+      fetch('https://izypaper-api.herokuapp.com/auth/user', {
       method: 'get',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include'
     })
       .then(response => response.json())
       .then(data => {
-        console.log('data.user', data)
-        if (data.user) {
-          setContext({ ...context, user: data.user, isAuthenticated: true });
-        } else {
-          setContext({ ...context, user: null, isAuthenticated: false });
-        }
+        if (data.user) setContext(context => ({ ...context, user: data.user, isAuthenticated: true })) 
+        else setContext(context => ({ ...context, user: null, isAuthenticated: false }));
       })
       .catch(error => console.log('error', error))
     };

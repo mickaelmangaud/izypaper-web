@@ -16,7 +16,7 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/auth/login', {
+    fetch('https://izypaper-api.herokuapp.com/auth/login', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: formFields.email, password: formFields.password }),
