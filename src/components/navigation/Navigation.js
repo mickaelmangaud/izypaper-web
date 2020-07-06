@@ -3,7 +3,7 @@ import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { Panel, Burger, SideMenu } from '..';
+import { Panel , SideMenu, Burger } from './index';
 import { UserContext } from '../../context';
 
 const Navigation = () => {
