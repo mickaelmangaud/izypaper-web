@@ -1,17 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import fetch from 'isomorphic-fetch';
+import { navigate } from 'gatsby';
 
-export const Context = React.createContext(null);
+export const UserContext = React.createContext(null);
 
-const ContextProvider = ({ children }) => {
+const UserContextProvider = ({ children }) => {
   const [context, setContext] = useState({
-    menuOpen: false,
-  })
+    isAuthenticated: false,
+    user: null,
+    error: null,
+  });
+
+  useEffect(() => {
+    const getUserData = async () => {
+      fetch('http://localhost:5000/auth/user', {
+      method: 'get',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include'
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('data.user', data)
+        if (data.user) {
+          setContext({ ...context, user: data.user, isAuthenticated: true });
+        } else {
+          setContext({ ...context, user: null, isAuthenticated: false });
+        }
+      })
+      .catch(error => console.log('error', error))
+    };
+
+    getUserData();
+  }, []);
 
   return (
-    <Context.Provider value={{context, setContext}}>
+    <UserContext.Provider value={{context, setContext}}>
       {children}
-    </Context.Provider>
+    </UserContext.Provider>
   )
 };
 
-export default ContextProvider;
+export default UserContextProvider;

@@ -22,10 +22,10 @@ const Panel = styled.div`
   }
 `;         
 
-export default ({isVisible}) => {
+export default ({isVisible, user}) => {
   return (
     <Panel isVisible={isVisible}>
-      Infos
+      Bienvenue {user.email}
     </Panel>
   )
 }

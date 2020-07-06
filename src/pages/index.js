@@ -61,7 +61,7 @@ export const Index = () => {
     <IndexPageWrapper>
       <HeroSection>
         <div className="left">
-          <img src={scene} />
+          <img src={scene} alt="hero-scene"/>
         </div>
         <div className="right">
           <h1>IzyPaper</h1>

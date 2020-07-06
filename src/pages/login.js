@@ -1,36 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { PageWrapper } from '../styled';
-import axios from 'axios';
+import fetch from 'isomorphic-fetch';
+import { UserContext } from '../context';
 import { navigate } from 'gatsby';
 
 const Login = () => {
+  const { context, setContext } = useContext(UserContext);
   const [formFields, updateFormFields] = useState({
     email: '',
     password: ''
   });
-  
   const [error, setError] = useState(null);
+  
+  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
-  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value})
-
-  const submitLogin = async (e) => {
+  const login = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('https://izypaper-api.herokuapp.com/auth/login', formFields,{
-        withCredentials: true,
-      });
-      console.log(response.status)
-      setError(null);
-      navigate('/')
-      // Mettre le user dans le contexte
-    } catch (error) {
-      setError(error.message)
-    }
+    fetch('http://localhost:5000/auth/login', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: formFields.email, password: formFields.password }),
+      credentials: 'include'
+    })
+      .then(response => response.json())
+      .then(({error, user}) => {
+        if (error) setError(error.message)
+        else {
+          setError(null);
+          setContext({ ...context, user, isAuthenticated: true})
+          navigate('/');
+        }
+      })
+      .catch(error => console.log('error', error))
   }
 
   return (
     <PageWrapper>
-      <form onSubmit={submitLogin}>
+      { !!context.user && <p>{`${context.user.email}`}</p> }
+      <form onSubmit={login}>
         {error && <p>{error}</p>}
         <input 
           type="email" 
@@ -44,7 +51,7 @@ const Login = () => {
           name="password"
           onChange={updateInput}
         />
-        <button>Submit</button>
+        <button>Register</button>
       </form>
     </PageWrapper>
   )

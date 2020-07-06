@@ -48,6 +48,7 @@ export const Menu = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
+  margin-right: 24px;
   @media (max-width: 860px) { display: none };
 `;
 
@@ -56,7 +57,7 @@ export const App = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${({theme}) => theme.sizes.menuHeight};
+  width: 105px;
 
   .material-icons {
     border-radius: 50%;
@@ -80,13 +81,13 @@ export const NavButton = styled.button`
   background-color: white;
   padding: 12px 18px;
   border: none;
-  border-radius: 3px;
-  margin: 0 12px;
+  margin: 0 24px 0 0;
   color: ${({theme}) => theme.colors.primary};
   font-weight: 500;
   font-size: 14px;
   outline: none;
   height: 40px;
+  border-radius: 40px;
   @media (max-width: 860px) {
     display: none;  
   }

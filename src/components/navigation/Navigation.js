@@ -1,11 +1,13 @@
-import React, {  useRef, useEffect, useState } from 'react';
+import React, {  useRef, useEffect, useState, useContext } from 'react';
 import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { Panel, Burger, SideMenu } from '..';
+import { UserContext } from '../../context';
 
 const Navigation = () => {
+  const { context } = useContext(UserContext);
   const location = useLocation();
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
@@ -13,10 +15,7 @@ const Navigation = () => {
   const sideMenuRef = useRef(null);
 
   const handleTogglePanel = () => setIsPanelVisible(!isPanelVisible);
-  const toggleSideMenuVisible = () => {
-    console.log('setIsSideMenuVisible', isSideMenuVisible)
-    setIsSideMenuVisible(!isSideMenuVisible)
-  };
+  const toggleSideMenuVisible = () =>  setIsSideMenuVisible(!isSideMenuVisible);
 
   useEffect(() => {
     const handleClickOutside = e => panelRef.current && !panelRef.current.contains(e.target) && setIsPanelVisible(false);
@@ -24,6 +23,7 @@ const Navigation = () => {
     return () => document.removeEventListener('clic', handleClickOutside);
   }, [panelRef, sideMenuRef]);
   
+
   return (
     <Wrapper>
       <div onClick={toggleSideMenuVisible}>
@@ -47,14 +47,20 @@ const Navigation = () => {
         )}
       </Menu>
       
-      <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
+      
+      {!context.user 
+      ? <>
+          <NavButton onClick={() => navigate('/register')}>Créer un compte</NavButton>
+          <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
+        </>
 
-      <App ref={panelRef}>
-        <span className="material-icons" onClick={handleTogglePanel}>
+      :  <App ref={panelRef}>
+          <span className="material-icons" onClick={handleTogglePanel}>
             account_circle
-        </span>
-        <Panel isVisible={isPanelVisible}/>
-      </App>
+          </span>
+          <Panel isVisible={isPanelVisible} user={context.user}/>
+        </App>
+      }
     </Wrapper>
   )
 };
