@@ -56,7 +56,6 @@ const CallToAction = styled.button`
 `;
 
 export const Index = () => {
-
   return (
     <IndexPageWrapper>
       <HeroSection>

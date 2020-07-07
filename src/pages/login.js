@@ -17,7 +17,7 @@ const Login = () => {
     try {
       setError(null);
       const response = await axios.post(
-        'http://localhost:5000/auth/login', 
+        `${process.env.BASE_API_URL}/auth/login`, 
         formFields, 
         { withCredentials: true }
       );
