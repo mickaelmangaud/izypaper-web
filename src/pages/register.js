@@ -8,13 +8,13 @@ const Register = () => {
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value });
   
   const register = async (e) => {
-    setInfo(null);
     e.preventDefault();
+    setInfo(null);
     try {
       await axios.post(
         'http://localhost:5000/auth/register',
         formFields,
-        { withCredentials: true}
+        { withCredentials: true }
       );
       setInfo(`Utilisateur créé avec l'adresse : ${formFields.email}`)
     } catch (err) {

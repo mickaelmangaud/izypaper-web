@@ -29,7 +29,7 @@ export default ({isVisible, user}) => {
 
 
   const logout = async () => {
-    await axios.get('http://localhost:5000/auth/logout');
+    await axios.get('http://localhost:5000/auth/logout', { withCredentials: true });
     setContext({ ...context, user: null, isAuthenticated: false });
   }
 
