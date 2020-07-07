@@ -4,6 +4,8 @@ import { UserContext } from '../context';
 import { navigate } from 'gatsby';
 import axios from 'axios';
 
+console.log('test')
+
 const Login = () => {
   const { context, setContext } = useContext(UserContext);
   const [formFields, updateFormFields] = useState({ email: '', password: '' });
