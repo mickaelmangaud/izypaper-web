@@ -12,6 +12,7 @@ const Login = () => {
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
   const login = async e => {
+    
     setError(null);
     e.preventDefault();
     try {
