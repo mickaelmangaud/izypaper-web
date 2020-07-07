@@ -12,13 +12,12 @@ const Login = () => {
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
   const login = async e => {
-    
     setError(null);
     e.preventDefault();
     try {
       setError(null);
       const response = await axios.post(
-        `${process.env.BASE_API_URL}/auth/login`, 
+        'http://localhost:5000/auth/login', 
         formFields, 
         { withCredentials: true }
       );
