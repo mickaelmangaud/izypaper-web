@@ -26,7 +26,6 @@
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-styled-components": "^3.3.6",
     "graphql": "^15.2.0",
-    "isomorphic-fetch": "^2.2.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-google-login": "^5.1.20",

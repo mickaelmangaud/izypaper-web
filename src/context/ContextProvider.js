@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import fetch from 'isomorphic-fetch';
+import axios from 'axios';
 
 export const UserContext = React.createContext(null);
 
@@ -12,17 +12,12 @@ const UserContextProvider = ({ children }) => {
 
   useEffect(() => {
     const getUserData = async () => {
-      fetch('https://izypaper-api.herokuapp.com/auth/user', {
-      method: 'get',
-      headers: { 'Content-Type': 'application/json' },
-      credentials: 'include'
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.user) setContext(context => ({ ...context, user: data.user, isAuthenticated: true })) 
-        else setContext(context => ({ ...context, user: null, isAuthenticated: false }));
-      })
-      .catch(error => console.log('error', error))
+      try {
+        const { data } = await axios.get('http://localhost:5000/auth/user', { withCredentials: true });
+        setContext(context => ({ ...context, user: data.user, isAuthenticated: true }));
+      } catch (err) {
+        setContext(context => ({ ...context, user: null, isAuthenticated: false }));
+      }
     };
 
     getUserData();

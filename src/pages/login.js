@@ -1,37 +1,31 @@
 import React, { useState, useContext } from 'react';
 import { PageWrapper } from '../styled';
-import fetch from 'isomorphic-fetch';
 import { UserContext } from '../context';
 import { navigate } from 'gatsby';
+import axios from 'axios';
 
 const Login = () => {
   const { context, setContext } = useContext(UserContext);
-  const [formFields, updateFormFields] = useState({
-    email: '',
-    password: ''
-  });
+  const [formFields, updateFormFields] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
   
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
-  const login = (e) => {
+  const login = async e => {
+    setError(null);
     e.preventDefault();
-    fetch('https://izypaper-api.herokuapp.com/auth/login', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: formFields.email, password: formFields.password }),
-      credentials: 'include'
-    })
-      .then(response => response.json())
-      .then(({error, user}) => {
-        if (error) setError(error.message)
-        else {
-          setError(null);
-          setContext({ ...context, user, isAuthenticated: true})
-          navigate('/');
-        }
-      })
-      .catch(error => console.log('error', error))
+    try {
+      setError(null);
+      const response = await axios.post(
+        'http://localhost:5000/auth/login', 
+        formFields, 
+        { withCredentials: true }
+      );
+      setContext({ ...context, user: response.data.user, isAuthenticated: true });
+      navigate('/');
+    } catch (err) {
+      setError(err.message);
+    }
   }
 
   return (

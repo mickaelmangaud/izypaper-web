@@ -1,44 +1,31 @@
 import React, { useState } from 'react';
 import { PageWrapper } from '../styled';
+import axios from 'axios';
 
 const Register = () => {
-  const [error, setError] = useState(null);
-  const [formFields, updateFormFields] = useState({
-    email: '',
-    password: ''
-  });
-  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value})
+  const [info, setInfo] = useState(null);
+  const [formFields, updateFormFields] = useState({ email: '', password: '' });
+  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value });
   
   const register = async (e) => {
+    setInfo(null);
     e.preventDefault();
-    fetch('https://izypaper-api.herokuapp.com/auth/register', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      credentials: 'include',
-      body: JSON.stringify({
-        email: formFields.email, 
-        password: formFields.password
-      })
-    })
-      .then(response => response.json())
-      .then(({ error, message }) => {
-        setError(null)
-        setError(message)
-        if (error) {
-          console.log(error)
-          setError(error.message)
-        }
-      })
-      .catch(error => console.log('error', error))
+    try {
+      await axios.post(
+        'http://localhost:5000/auth/register',
+        formFields,
+        { withCredentials: true}
+      );
+      setInfo(`Utilisateur créé avec l'adresse : ${formFields.email}`)
+    } catch (err) {
+      setInfo(err.message);
+    }
   }
 
   return (
     <PageWrapper>
       <form onSubmit={register}>
-        {error && <p>{error}</p>}
+        {info && <p>{info}</p>}
         <input 
           type="email" 
           value={formFields.email} 

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { UserContext } from '../../../context';
+import axios from 'axios';
 
 const Panel = styled.div`
   background-color: white;
@@ -23,9 +25,18 @@ const Panel = styled.div`
 `;         
 
 export default ({isVisible, user}) => {
+  const { context, setContext } = useContext(UserContext);
+
+
+  const logout = async () => {
+    await axios.get('http://localhost:5000/auth/logout');
+    setContext({ ...context, user: null, isAuthenticated: false });
+  }
+
   return (
     <Panel isVisible={isVisible}>
       Bienvenue {user.email}
+      <p onClick={logout}>Déconnexion</p>
     </Panel>
   )
 }
