@@ -18,7 +18,7 @@ const Login = () => {
     try {
       setError(null);
       const response = await axios.post(
-        `${process.env.BASE_API_URL}/auth/login`, 
+        `${process.env.GATSBY_BASE_API_URL}/auth/login`, 
         formFields, 
         { withCredentials: true }
       );
@@ -29,7 +29,7 @@ const Login = () => {
     }
   }
 
-  console.log('myenv', process.env.BASE_API_URL)
+  console.log('myenv', process.env.GATSBY_BASE_API_URL)
 
   return (
     <PageWrapper>
