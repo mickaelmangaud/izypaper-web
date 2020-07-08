@@ -23,6 +23,7 @@ export const HeroSection = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: ${({theme}) => theme.sizes.menuHeight};
 
       @media (max-width: 860px) {
         display: none;
@@ -40,6 +41,7 @@ export const HeroSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: ${({theme}) => theme.sizes.menuHeight};
     
     h1 {
       font-size: 6vw;

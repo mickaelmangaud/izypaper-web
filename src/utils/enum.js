@@ -13,6 +13,6 @@ export const navLinks = [
     },
     {
         label: 'Contact',
-        xxpath: '/contact',
+        path: '/contact',
     }
 ];
