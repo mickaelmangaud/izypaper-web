@@ -15,6 +15,13 @@ export const Wrapper = styled.div`
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
   }
+
+  .connect-icon {
+    color: white;
+    font-size: 42px;
+    margin-right: 12px;
+    @media (min-width: 860px) { display: none };
+  }
 `;
 
 export const Logo = styled.div`
@@ -93,7 +100,7 @@ export const NavButton = styled.button`
   height: 40px;
   border-radius: 40px;
   @media (max-width: 860px) {
-    display: none;  
+    display: none;
   }
 `;
 

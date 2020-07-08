@@ -52,6 +52,11 @@ const Navigation = () => {
       ? <>
           <NavButton onClick={() => navigate('/register')}>Créer un compte</NavButton>
           <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
+          <span 
+            class="material-icons connect-icon"
+            onClick={() => navigate('/login')}>
+            power_settings_new
+          </span>
         </>
 
       :  <App ref={panelRef}>

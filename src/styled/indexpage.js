@@ -77,6 +77,7 @@ export const CallToAction = styled.button`
   border-radius: 40px;
   border:none;
   font-size: 1.5vw;
+  background-color: white;
   color: ${({theme}) => theme.colors.primary};
   @media (max-width: 860px) {
     width: 90%;
