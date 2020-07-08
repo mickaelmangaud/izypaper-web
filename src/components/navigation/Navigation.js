@@ -55,6 +55,7 @@ const Navigation = () => {
         </>
 
       :  <App ref={panelRef}>
+          <p className="username">{context.user.email}</p>
           <span className="material-icons" onClick={handleTogglePanel}>
             account_circle
           </span>

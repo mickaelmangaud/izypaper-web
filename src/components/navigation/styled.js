@@ -48,7 +48,6 @@ export const Menu = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  margin-right: 24px;
   @media (max-width: 860px) { display: none };
 `;
 
@@ -56,8 +55,13 @@ export const App = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 105px;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  .username {
+    margin: 0 24px;
+    color: white;
+  }
 
   .material-icons {
     border-radius: 50%;
