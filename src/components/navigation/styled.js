@@ -94,7 +94,6 @@ export const NavButton = styled.button`
   border: none;
   margin: 0 24px 0 0;
   color: ${({theme}) => theme.colors.primary};
-  font-weight: 500;
   font-size: 14px;
   outline: none;
   height: 40px;
