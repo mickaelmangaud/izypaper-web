@@ -31,6 +31,7 @@ export const Logo = styled.div`
   align-items: center;
   width: 250px;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
   color: white;
   .material-icons { color: white; font-size: 36px }; 
   @media (max-width: 860px) {
