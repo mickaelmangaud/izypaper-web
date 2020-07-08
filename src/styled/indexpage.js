@@ -51,7 +51,7 @@ export const HeroSection = styled.section`
 
     .description {
       font-size: 2vw;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Lato', sans-serif;
       font-weight: 300;
       line-height: 2.5vw;
       margin-bottom: 4vw;
