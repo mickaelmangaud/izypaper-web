@@ -55,7 +55,6 @@ export const HeroSection = styled.section`
       font-weight: 300;
       line-height: 2.5vw;
       margin-bottom: 4vw;
-      max-width:595px;
       @media (max-width: 860px) {
         font-size: 6vw;
         line-height: 7vw;
