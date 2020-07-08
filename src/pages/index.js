@@ -14,7 +14,7 @@ export const Index = () => {
           <p className="description">
             Le service juridique et administratif des entrepreneurs expatriés. 
             Nous vous accompagnons dans vos démarches d'expatriation en France
-            et dans l'espace OHADA
+            et en Afrique
           </p>
           <CallToAction>
             Créer mon entreprise au pays
