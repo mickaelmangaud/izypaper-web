@@ -4,13 +4,11 @@ import { UserContext } from '../context';
 import { navigate } from 'gatsby';
 import axios from 'axios';
 
-
-
 const Login = () => {
   const { context, setContext } = useContext(UserContext);
   const [formFields, updateFormFields] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
-  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
+  const handleOnChange = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
   const login = async e => {
     setError(null);
@@ -40,13 +38,13 @@ const Login = () => {
           type="email" 
           value={formFields.email} 
           name="email"
-          onChange={updateInput}
+          onChange={handleOnChange}
         />
         <input
           type="password"
           value={formFields.password}
           name="password"
-          onChange={updateInput}
+          onChange={handleOnChange}
         />
         <button>Register</button>
       </form>

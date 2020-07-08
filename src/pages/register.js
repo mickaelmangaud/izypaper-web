@@ -5,7 +5,7 @@ import axios from 'axios';
 const Register = () => {
   const [info, setInfo] = useState(null);
   const [formFields, updateFormFields] = useState({ email: '', password: '' });
-  const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value });
+  const handleOnChange = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value });
   
   const register = async (e) => {
     e.preventDefault();
@@ -30,13 +30,13 @@ const Register = () => {
           type="email" 
           value={formFields.email} 
           name="email"
-          onChange={updateInput}
+          onChange={handleOnChange}
         />
         <input
           type="password"
           value={formFields.password}
           name="password"
-          onChange={updateInput}
+          onChange={handleOnChange}
         />
         <button>Submit</button>
       </form>
