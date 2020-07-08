@@ -4,6 +4,8 @@ import { UserContext } from '../context';
 import { navigate } from 'gatsby';
 import axios from 'axios';
 
+
+
 const Login = () => {
   const { context, setContext } = useContext(UserContext);
   const [formFields, updateFormFields] = useState({ email: '', password: '' });
@@ -16,7 +18,7 @@ const Login = () => {
     try {
       setError(null);
       const response = await axios.post(
-        'http://localhost:5000/auth/login', 
+        `${process.env.BASE_API_URL}/auth/login`, 
         formFields, 
         { withCredentials: true }
       );
