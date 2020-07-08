@@ -55,12 +55,8 @@ export const HeroSection = styled.section`
       font-size: 2vw;
       font-family: 'Lato', sans-serif;
       font-weight: 300;
-      line-height: 2.5vw;
       margin-bottom: 4vw;
-      @media (max-width: 860px) {
-        font-size: 6vw;
-        line-height: 7vw;
-      }
+      @media (max-width: 860px) { font-size: 6vw };
     }
   }
 `;

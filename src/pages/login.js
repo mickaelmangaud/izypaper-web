@@ -27,8 +27,6 @@ const Login = () => {
     }
   }
 
-  console.log('myenv',process.env.GATSBY_BASE_API_URL)
-
   return (
     <PageWrapper>
       { !!context.user && <p>{`${context.user.email}`}</p> }

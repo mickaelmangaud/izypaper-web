@@ -1,6 +1,7 @@
 import React from 'react';
 import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { persistCache } from 'apollo-cache-persist';
+import { Loader } from '../components';
 
 class AppolloWrapper extends React.Component {
   state = {
@@ -14,7 +15,7 @@ class AppolloWrapper extends React.Component {
     const client = new ApolloClient({
       cache: cache,
       link: new HttpLink({
-        uri: 'https://izypaper-api.herokuapp.com/graphql',
+        uri: `${process.env.GATSBY_BASE_API_URL}/graphql`,
         credentials: 'include'
       })
     });
@@ -38,7 +39,7 @@ class AppolloWrapper extends React.Component {
     const { client, loaded } = this.state;
 
     if (!loaded) {
-      return <div>Loading appollo cache...</div>;
+      return <h1>Loading Apollo Cache</h1>;
     }
 
     return (

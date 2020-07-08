@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { UiContext } from '../context';
 
 export const UserContext = React.createContext(null);
 
 const UserContextProvider = ({ children }) => {
+  const { uiContext, setUiContext } = useContext(UiContext);
   const [context, setContext] = useState({
     isAuthenticated: false,
     user: null,
@@ -19,8 +21,11 @@ const UserContextProvider = ({ children }) => {
         setContext(context => ({ ...context, user: null, isAuthenticated: false, error: err.message }));
       }
     };
-
+    setUiContext({ ...uiContext, loaderDisplayed: true })
     getUserData();
+    setTimeout(() => {
+      setUiContext({ ...uiContext, loaderDisplayed: false })
+    }, 800);
   }, []);
 
   return (
