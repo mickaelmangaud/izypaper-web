@@ -18,6 +18,9 @@ export const HeroSection = styled.section`
   display: flex;
   height: 100%;
   scroll-snap-align: start;
+  @media (max-width: 860px) {
+    height: 80%;
+  }
 
   .left {
       display: flex;
