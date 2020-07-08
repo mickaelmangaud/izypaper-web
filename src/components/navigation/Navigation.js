@@ -56,10 +56,14 @@ const Navigation = () => {
 
       :  <App ref={panelRef}>
           <p className="username">{context.user.email}</p>
-          <span className="material-icons" onClick={handleTogglePanel}>
+          <span className="material-icons usericon" onClick={handleTogglePanel}>
             account_circle
           </span>
-          <Panel isVisible={isPanelVisible} user={context.user}/>
+          <Panel 
+            isVisible={isPanelVisible}
+            setIsPanelVisible={setIsPanelVisible}
+            user={context.user}
+          />
         </App>
       }
     </Wrapper>

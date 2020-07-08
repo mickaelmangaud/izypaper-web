@@ -56,23 +56,21 @@ export const App = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 16px 0 0;
 
   .username {
     margin: 0 24px;
     color: white;
+    @media (max-width: 860px) { display: none };
   }
 
-  .material-icons {
+  .usericon {
     border-radius: 50%;
     color: white;
     font-size: 48px;
     cursor: pointer;
     transition: all .2s ease;
-    @media (max-width: 860px) {
-      font-size: 48px;
-      margin-right: 18px;
-    }
+    @media (max-width: 860px) { font-size: 48px };
     &:hover {
       background-color: white;
       color: ${({theme}) => theme.colors.primary};
