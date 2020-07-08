@@ -42,6 +42,10 @@ export const HeroSection = styled.section`
     justify-content: center;
     align-items: center;
     margin-bottom: ${({theme}) => theme.sizes.menuHeight};
+    @media (max-width: 860px) {
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
     
     h1 {
       font-size: 6vw;
@@ -56,7 +60,11 @@ export const HeroSection = styled.section`
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       margin-bottom: 4vw;
-      @media (max-width: 860px) { font-size: 6vw };
+      @media (max-width: 860px) { 
+        font-size: 6vw;
+        position: relative;
+        bottom: 24px;
+      };
     }
   }
 `;
@@ -67,4 +75,8 @@ export const CallToAction = styled.button`
   border:none;
   font-size: 1.5vw;
   color: ${({theme}) => theme.colors.primary};
+  @media (max-width: 860px) {
+    width: 90%;
+    font-size: 4vw;
+  };
 `;
