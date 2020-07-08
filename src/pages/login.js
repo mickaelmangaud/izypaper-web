@@ -29,6 +29,8 @@ const Login = () => {
     }
   }
 
+  console.log('myenv', process.env.BASE_API_URL)
+
   return (
     <PageWrapper>
       { !!context.user && <p>{`${context.user.email}`}</p> }
