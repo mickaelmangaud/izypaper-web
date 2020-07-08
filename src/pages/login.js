@@ -29,7 +29,7 @@ const Login = () => {
     }
   }
 
-  console.log('myenv', process.env.GATSBY_BASE_API_URL)
+  console.log('myenv',process.env.GATSBY_BASE_API_URL)
 
   return (
     <PageWrapper>
