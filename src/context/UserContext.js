@@ -21,10 +21,10 @@ const UserContextProvider = ({ children }) => {
         setContext(context => ({ ...context, user: null, isAuthenticated: false, error: err.message }));
       }
     };
-    setUiContext({ ...uiContext, loaderDisplayed: true })
+    setUiContext({ ...uiContext, loaderDisplayed: true });
     getUserData();
     setTimeout(() => {
-      setUiContext({ ...uiContext, loaderDisplayed: false })
+      setUiContext({ ...uiContext, loaderDisplayed: false });
     }, 800);
   }, []);
 
