@@ -13,15 +13,14 @@ export const IndexPageWrapper = styled(PageWrapper)`
   padding: 0;
 `;
 
-export const HeroSection = styled.section`
+export const Section = styled.section`
   padding: 10%;
   display: flex;
   height: 100%;
   scroll-snap-align: start;
-  @media (max-width: 860px) {
-    height: 80%;
-  }
+`;
 
+export const HeroSection = styled(Section)`
   .left {
       display: flex;
       justify-content: center;
@@ -73,7 +72,7 @@ export const HeroSection = styled.section`
 `;
 
 export const CallToAction = styled.button`
-  padding: 16px 24px;
+  padding: 16px 42px;
   border-radius: 40px;
   border:none;
   font-size: 1.5vw;
@@ -82,5 +81,7 @@ export const CallToAction = styled.button`
   @media (max-width: 860px) {
     width: 90%;
     font-size: 4vw;
+    padding: 16px 24px;
+    margin-bottom: 20%;
   };
 `;
