@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   width: 100vw;
   position: fixed;
   top: 0;
-  box-shadow: 1px 1px 5px 2px rgba(80,80,80, .4);
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.2);
   border: none;
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
