@@ -12,7 +12,7 @@ const Register = () => {
     setInfo(null);
     try {
       await axios.post(
-        'http://localhost:5000/auth/register',
+        `${process.env.GATSBY_BASE_API_URL}/auth/register`,
         formFields,
         { withCredentials: true }
       );

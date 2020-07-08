@@ -13,7 +13,7 @@ const UserContextProvider = ({ children }) => {
   useEffect(() => {
     const getUserData = async () => {
       try {
-        const { data: { user } } = await axios.get('http://localhost:5000/auth/user', { withCredentials: true });
+        const { data: { user } } = await axios.get(`${process.env.GATSBY_BASE_API_URL}/auth/user`, { withCredentials: true });
         setContext(context => ({ ...context, user: user, isAuthenticated: true, error: null }));
       } catch (err) {
         setContext(context => ({ ...context, user: null, isAuthenticated: false, error: err.message }));

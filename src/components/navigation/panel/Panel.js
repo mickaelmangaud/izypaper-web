@@ -8,7 +8,7 @@ const Panel = ({ isVisible, setIsPanelVisible, user }) => {
   const closePanel = () => setIsPanelVisible(false);
   
   const logout = async () => {
-    await axios.get('http://localhost:5000/auth/logout', { withCredentials: true });
+    await axios.get(`${process.env.GATSBY_BASE_API_URL}/auth/logout`, { withCredentials: true });
     setContext({ ...context, user: null, isAuthenticated: false });
   }
 
