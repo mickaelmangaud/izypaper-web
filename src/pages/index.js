@@ -49,7 +49,7 @@ const HeroSection = styled.section`
 
 const CallToAction = styled.button`
   padding: 12px 18px;
-  border-radius: 5px;
+  border-radius: 40px;
   border:none;
   font-size: 1.5vw;
   color: ${({theme}) => theme.colors.primary};

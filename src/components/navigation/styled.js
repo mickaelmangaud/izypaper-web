@@ -48,6 +48,7 @@ export const Menu = styled.ul`
   justify-content: flex-end;
   align-items: center;
   list-style: none;
+  margin-right: 24px;
   @media (max-width: 860px) { display: none };
 `;
 
