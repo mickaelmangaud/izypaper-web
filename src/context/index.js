@@ -1,1 +1,1 @@
-export { default as UserContextProvider, UserContext } from './ContextProvider';
+export { default as UserContextProvider, UserContext } from './UserContext';

@@ -8,7 +8,6 @@ const Login = () => {
   const { context, setContext } = useContext(UserContext);
   const [formFields, updateFormFields] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
-  
   const updateInput = e => updateFormFields({ ...formFields, [e.target.name]: e.target.value});
 
   const login = async e => {
@@ -21,7 +20,7 @@ const Login = () => {
         formFields, 
         { withCredentials: true }
       );
-      setContext({ ...context, user: response.data.user, isAuthenticated: true });
+      setContext({ ...context, user: response.data.user, isAuthenticated: true, error: null });
       navigate('/');
     } catch (err) {
       setError(err.message);
