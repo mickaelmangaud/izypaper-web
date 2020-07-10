@@ -1,3 +1,0 @@
-GOOGLE CREDENTIALS:
-clientID: 97824979230-vda87hgco692hsdbfufhb4n97b6njsir.apps.googleusercontent.com
-clientSECRET: 8zn6csdVxVQXk-0ugPjJ9F5G
