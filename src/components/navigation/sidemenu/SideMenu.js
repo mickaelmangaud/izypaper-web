@@ -12,7 +12,7 @@ const SideMenuWrapper = styled.div`
   background-color: white;
   box-shadow: 0px 5px 12px 1px rgba(100,100,100,0.5);
   transition: all .2s ease;
-  @media (min-width: 860px) {
+  @media (min-width: 1000px) {
     display: none;  
   }
 `;

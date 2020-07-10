@@ -10,11 +10,11 @@ export const Index = () => {
           <img src={scene} alt="hero-scene"/>
         </div>
         <div className="right">
-          <h1>IzyPaper</h1>
+          <h1 className="one-sentence">
+            Le service JURIDIQUE et ADMINISTRATIF des ENTREPRENEURS EXPATRI&Eacute;S.
+          </h1>
           <p className="description">
-            Le service juridique et administratif des entrepreneurs expatriés. 
-            Nous vous accompagnons dans vos démarches d'expatriation en France
-            et en Afrique
+          Nous vous accompagnons dans vos démarches d’expatriation en France et en Afrique 
           </p>
           <CallToAction>
             Créer mon entreprise au pays

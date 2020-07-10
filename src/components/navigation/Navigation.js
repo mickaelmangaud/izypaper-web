@@ -1,35 +1,22 @@
-import React, {  useRef, useEffect, useState, useContext } from 'react';
-import { Wrapper, Logo, Menu, App, NavButton, MenuItem } from './styled';
+import React, { useState } from 'react';
+import { NavigationWrapper, Logo, Menu, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { Panel , SideMenu, Burger } from './index';
+import { SideMenu, Burger } from './index';
 
 const Navigation = () => {
   const location = useLocation();
-  const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
-  const panelRef = useRef(null);
-  const sideMenuRef = useRef(null);
 
-  const handleTogglePanel = () => setIsPanelVisible(!isPanelVisible);
   const toggleSideMenuVisible = () =>  setIsSideMenuVisible(!isSideMenuVisible);
 
-  useEffect(() => {
-    const handleClickOutside = e => panelRef.current && !panelRef.current.contains(e.target) && setIsPanelVisible(false);
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('clic', handleClickOutside);
-  }, [panelRef, sideMenuRef]);
-  
-
   return (
-    <Wrapper>
-      <div onClick={toggleSideMenuVisible}>
-        <Burger isSideMenuVisible={isSideMenuVisible} />
-      </div>
-      <div ref={sideMenuRef}>
-        <SideMenu isVisible={isSideMenuVisible}/>
-      </div>
+    <NavigationWrapper>
+      <Burger isSideMenuVisible={isSideMenuVisible}/>
+
+      <SideMenu isVisible={isSideMenuVisible}/>
+
       <Logo>
         <span className="material-icons">attach_file</span>
         <Link to={'/'}>IzyPaper</Link>
@@ -46,9 +33,11 @@ const Navigation = () => {
       </Menu>
       
       
-      <NavButton onClick={() => navigate('/register')}>Créer un compte</NavButton>
-      <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
-    </Wrapper>
+      <div className="buttons">
+        <NavButton >Créer un compte</NavButton>
+        <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
+      </div>
+    </NavigationWrapper>
   )
 };
 

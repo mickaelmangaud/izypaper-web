@@ -22,6 +22,7 @@ export const Section = styled.section`
 
 export const HeroSection = styled(Section)`
   .left {
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -30,38 +31,44 @@ export const HeroSection = styled(Section)`
       @media (max-width: 860px) {
         display: none;
       }
-      flex: 1;
       img { 
-        width: 90%;
+        max-width: 90%;
       }
     }
 
   .right {
     flex: 1;
-    padding: 3% 0;
+    padding-left: 5%;
+    /* padding: 3% 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    /* margin-left: 48px; */
     margin-bottom: ${({theme}) => theme.sizes.menuHeight};
     @media (max-width: 860px) {
       justify-content: space-between;
       margin-bottom: 0;
     }
     
-    h1 {
-      font-size: 6vw;
-      margin-bottom: 36px;
+    .one-sentence {
+      font-size: 2.5vw;
+      text-align: left;
+      margin-bottom: 24px;
+      max-width: 75%;
+      line-height: 58px;
       @media (max-width: 860px) {
         font-size: 16vw;
       }
     }
 
     .description {
-      font-size: 2vw;
+      font-size: 1.5vw;
+      text-align: left;
       font-family: 'Lato', sans-serif;
       font-weight: 300;
       margin-bottom: 4vw;
+      max-width: 75%;
       @media (max-width: 860px) { 
         font-size: 6vw;
         position: relative;
@@ -72,11 +79,12 @@ export const HeroSection = styled(Section)`
 `;
 
 export const CallToAction = styled.button`
-  padding: 16px 42px;
+  padding: 16px 16px;
   border-radius: 40px;
   border:none;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   background-color: white;
+  width: 75%;
   color: ${({theme}) => theme.colors.primary};
   @media (max-width: 860px) {
     width: 90%;

@@ -2,14 +2,18 @@ import styled from 'styled-components';
 
 export const BurgerWrapper = styled.div`
   z-index: 100;
-  min-width: ${({theme}) => theme.sizes.mobileMenuHeight};
-  height: ${({theme}) => theme.sizes.mobileMenuHeight};
+  width: 90px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 860px) {
+  @media (min-width: 1000px) {
     display: none;
   }
+  @media (min-width: 1000px) {
+    width: 72px;
+  }
+  
 
   input {
     position: absolute;
