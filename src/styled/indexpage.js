@@ -39,12 +39,9 @@ export const HeroSection = styled(Section)`
   .right {
     flex: 1;
     padding: 0 7%;
-    /* padding: 3% 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
-    /* margin-left: 48px; */
     margin-bottom: ${({theme}) => theme.sizes.menuHeight};
     @media (max-width: 860px) {
       justify-content: space-between;

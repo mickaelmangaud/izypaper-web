@@ -11,7 +11,7 @@ export const Index = () => {
         </div>
         <div className="right">
           <h1 className="one-sentence">
-            <span style={{ fontSize: '75%', fontWeight: '100'}}>Le service</span> JURIDIQUE <span style={{ fontSize: '75%', fontWeight: '100'}}>et</span> ADMINISTRATIF <span style={{ fontSize: '75%', fontWeight: '100'}}>des</span> ENTREPRENEURS EXPATRI&Eacute;S.
+            <span style={{ fontSize: '75%', fontWeight: '100'}}>Le service</span> JURIDIQUE <span style={{ fontSize: '75%', fontWeight: '100'}}>et</span> ADMINISTRATIF <span style={{ fontSize: '75%', fontWeight: '100'}}>des</span> ENTREPRENEURS EXPATRI&Eacute;S
           </h1>
           <p className="description">
           Nous vous accompagnons dans vos démarches d’expatriation en France et en Afrique 

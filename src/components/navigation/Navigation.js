@@ -11,9 +11,7 @@ const Navigation = () => {
   return (
     <NavigationWrapper>
       <Burger />
-
       <SideMenu />
-
       <Logo>
         <span className="material-icons">attach_file</span>
         <Link to={'/'}>IzyPaper</Link>
@@ -28,7 +26,6 @@ const Navigation = () => {
           </MenuItem>
         )}
       </Menu>
-      
       
       <div className="buttons">
         <NavButton >Créer un compte</NavButton>
