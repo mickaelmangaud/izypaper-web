@@ -4,10 +4,8 @@ import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { Panel , SideMenu, Burger } from './index';
-import { UserContext } from '../../context';
 
 const Navigation = () => {
-  const { context } = useContext(UserContext);
   const location = useLocation();
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
@@ -48,29 +46,8 @@ const Navigation = () => {
       </Menu>
       
       
-      {!context.user 
-      ? <>
-          <NavButton onClick={() => navigate('/register')}>Créer un compte</NavButton>
-          <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
-          <span 
-            className="material-icons connect-icon"
-            onClick={() => navigate('/login')}>
-            power_settings_new
-          </span>
-        </>
-
-      :  <App ref={panelRef}>
-          <p className="username">{context.user.email}</p>
-          <span className="material-icons usericon" onClick={handleTogglePanel}>
-            account_circle
-          </span>
-          <Panel 
-            isVisible={isPanelVisible}
-            setIsPanelVisible={setIsPanelVisible}
-            user={context.user}
-          />
-        </App>
-      }
+      <NavButton onClick={() => navigate('/register')}>Créer un compte</NavButton>
+      <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
     </Wrapper>
   )
 };
