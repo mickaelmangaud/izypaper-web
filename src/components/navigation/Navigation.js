@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavigationWrapper, Logo, Menu, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link, navigate } from 'gatsby';
@@ -7,15 +7,12 @@ import { SideMenu, Burger } from './index';
 
 const Navigation = () => {
   const location = useLocation();
-  const [isSideMenuVisible, setIsSideMenuVisible] = useState(false);
-
-  const toggleSideMenuVisible = () =>  setIsSideMenuVisible(!isSideMenuVisible);
 
   return (
     <NavigationWrapper>
-      <Burger isSideMenuVisible={isSideMenuVisible}/>
+      <Burger />
 
-      <SideMenu isVisible={isSideMenuVisible}/>
+      <SideMenu />
 
       <Logo>
         <span className="material-icons">attach_file</span>

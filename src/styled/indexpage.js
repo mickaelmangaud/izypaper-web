@@ -38,7 +38,7 @@ export const HeroSection = styled(Section)`
 
   .right {
     flex: 1;
-    padding-left: 5%;
+    padding: 0 7%;
     /* padding: 3% 0; */
     display: flex;
     flex-direction: column;
@@ -54,21 +54,17 @@ export const HeroSection = styled(Section)`
     .one-sentence {
       font-size: 2.5vw;
       text-align: left;
-      margin-bottom: 24px;
-      max-width: 75%;
-      line-height: 58px;
+      margin-bottom: 36px;
       @media (max-width: 860px) {
         font-size: 16vw;
       }
     }
 
     .description {
-      font-size: 1.5vw;
+      font-size: 1.4vw;
       text-align: left;
       font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      margin-bottom: 4vw;
-      max-width: 75%;
+      margin-bottom: 5vw;
       @media (max-width: 860px) { 
         font-size: 6vw;
         position: relative;
@@ -84,7 +80,6 @@ export const CallToAction = styled.button`
   border:none;
   font-size: 1.2vw;
   background-color: white;
-  width: 75%;
   color: ${({theme}) => theme.colors.primary};
   @media (max-width: 860px) {
     width: 90%;
