@@ -7,10 +7,10 @@ export const BurgerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 1000px) {
+  @media (min-width: 1080px) {
     display: none;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 1080px) {
     width: 72px;
   }
   

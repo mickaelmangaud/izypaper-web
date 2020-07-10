@@ -16,7 +16,7 @@ export const NavigationWrapper = styled.div`
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1080px) {
     padding: 0;
   }
 `;
@@ -54,7 +54,7 @@ export const Menu = styled.ul`
   align-items: center;
   list-style: none;
   margin-right: 24px;
-  @media (max-width: 1000px) { display: none };
+  @media (max-width: 1080px) { display: none };
 `;
 
 export const MenuItem = styled.li`
