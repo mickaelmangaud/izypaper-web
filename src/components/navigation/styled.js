@@ -80,7 +80,7 @@ export const MenuItem = styled.li`
     }
 `;
 
-export const NavButton = styled.button`
+export const NavButton = styled.a`
   white-space: nowrap;
   background-color: white;
   padding: 12px 18px;
@@ -91,6 +91,7 @@ export const NavButton = styled.button`
   outline: none;
   height: 40px;
   border-radius: 40px;
+  text-decoration: none;
   @media (max-width: 860px) {
     display: none;
   }

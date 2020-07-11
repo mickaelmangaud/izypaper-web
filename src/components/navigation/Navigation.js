@@ -28,8 +28,8 @@ const Navigation = () => {
       </Menu>
       
       <div className="buttons">
-        <NavButton >Créer un compte</NavButton>
-        <NavButton onClick={() => navigate('/login')}>Connexion</NavButton>
+        <NavButton href="https://app.izypaper.com">Inscription</NavButton>
+        <NavButton href="https://app.izypaper.com">Connexion</NavButton>
       </div>
     </NavigationWrapper>
   )
