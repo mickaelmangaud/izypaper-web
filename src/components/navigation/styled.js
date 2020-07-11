@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const NavigationWrapper = styled.div`
+  padding: 0 24px;
   z-index: 5;
   display: flex;
   justify-content: space-between;
@@ -15,21 +16,17 @@ export const Wrapper = styled.div`
   @media (max-width: 860px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
   }
-
-  .connect-icon {
-    color: white;
-    font-size: 42px;
-    margin-right: 12px;
-    @media (min-width: 860px) { display: none };
+  @media (max-width: 1080px) {
+    padding: 0;
   }
 `;
 
 export const Logo = styled.div`
-  margin-right: 32px;
+  /* margin-right: 72px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  /* width: 250px; */
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: white;
@@ -57,51 +54,7 @@ export const Menu = styled.ul`
   align-items: center;
   list-style: none;
   margin-right: 24px;
-  @media (max-width: 860px) { display: none };
-`;
-
-export const App = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px 0 0;
-
-  .username {
-    margin: 0 24px;
-    color: white;
-    @media (max-width: 860px) { display: none };
-  }
-
-  .usericon {
-    border-radius: 50%;
-    color: white;
-    font-size: 48px;
-    cursor: pointer;
-    transition: all .2s ease;
-    @media (max-width: 860px) { font-size: 48px };
-    &:hover {
-      background-color: white;
-      color: ${({theme}) => theme.colors.primary};
-      transform: scale(.85);
-    }
-  }
-`;
-
-export const NavButton = styled.button`
-  white-space: nowrap;
-  background-color: white;
-  padding: 12px 18px;
-  border: none;
-  margin: 0 24px 0 0;
-  color: ${({theme}) => theme.colors.primary};
-  font-size: 14px;
-  outline: none;
-  height: 40px;
-  border-radius: 40px;
-  @media (max-width: 860px) {
-    display: none;
-  }
+  @media (max-width: 1080px) { display: none };
 `;
 
 export const MenuItem = styled.li`
@@ -125,4 +78,20 @@ export const MenuItem = styled.li`
       position: relative;
       top: ${({active}) => active ? '2px' : ''};
     }
+`;
+
+export const NavButton = styled.button`
+  white-space: nowrap;
+  background-color: white;
+  padding: 12px 18px;
+  border: none;
+  margin: 0 24px 0 0;
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 14px;
+  outline: none;
+  height: 40px;
+  border-radius: 40px;
+  @media (max-width: 860px) {
+    display: none;
+  }
 `;
