@@ -26,8 +26,7 @@ export const HeroSection = styled(Section)`
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: ${({theme}) => theme.sizes.menuHeight};
-
+      /* margin-bottom: 45px; */
       @media (max-width: 860px) {
         display: none;
       }
@@ -42,7 +41,7 @@ export const HeroSection = styled(Section)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: ${({theme}) => theme.sizes.menuHeight};
+    /* margin-bottom: 45px; */
     @media (max-width: 860px) {
       justify-content: space-between;
       margin-bottom: 0;
