@@ -21,15 +21,6 @@ export const Index = () => {
           </CallToAction>
         </div>
       </HeroSection>
-      <Section>
-        <h1>2ème Section</h1>
-      </Section>
-      <Section>
-        <h1>3ème Section</h1>
-      </Section>
-      <Section>
-        <h1>4ème (soyons fous)</h1>
-      </Section>
     </IndexPageWrapper>
   )
 };
