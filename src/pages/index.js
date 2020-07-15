@@ -17,7 +17,7 @@ export const Index = () => {
           Nous vous accompagnons dans vos démarches d’expatriation en France et en Afrique 
           </p>
           <CallToAction>
-            Créer mon entreprise au pays
+            <a href="https://app.izypaper.com/creer-mon-entreprise">Créer mon entreprise au pays</a>
           </CallToAction>
         </div>
       </HeroSection>

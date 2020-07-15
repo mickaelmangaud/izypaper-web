@@ -28,8 +28,8 @@ const Navigation = () => {
       </Menu>
       
       <div className="buttons">
-        <NavButton href="https://app.izypaper.com">Inscription</NavButton>
-        <NavButton href="https://app.izypaper.com">Connexion</NavButton>
+        <NavButton href="https://app.izypaper.com/inscription">Inscription</NavButton>
+        <NavButton href="https://app.izypaper.com/login">Connexion</NavButton>
       </div>
     </NavigationWrapper>
   )
