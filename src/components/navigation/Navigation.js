@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationWrapper, Logo, Menu, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { SideMenu, Burger } from './index';
 

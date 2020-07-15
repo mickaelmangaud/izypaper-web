@@ -73,8 +73,7 @@ export const HeroSection = styled(Section)`
 export const CallToAction = styled.button`
   align-self: center;
   font-weight: bold;
-  padding: 20px 24px;
-  /* text-transform: uppercase; */
+  padding: 20px 36px;
   border-radius: 40px;
   border:none;
   background-color: white;

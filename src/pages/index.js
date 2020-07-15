@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexPageWrapper, HeroSection, CallToAction, Section } from '../styled';
+import { IndexPageWrapper, HeroSection, CallToAction } from '../styled';
 import { scene } from '../assets/images';
 
 export const Index = () => {
