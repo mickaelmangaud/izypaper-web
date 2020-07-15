@@ -71,16 +71,17 @@ export const HeroSection = styled(Section)`
 `;
 
 export const CallToAction = styled.button`
-  padding: 16px 16px;
+  align-self: center;
+  font-weight: bold;
+  padding: 20px 24px;
+  /* text-transform: uppercase; */
   border-radius: 40px;
   border:none;
-  font-size: 1.2vw;
   background-color: white;
-  color: ${({theme}) => theme.colors.primary};
-  @media (max-width: 860px) {
-    width: 90%;
-    font-size: 4vw;
-    padding: 16px 24px;
-    margin-bottom: 20%;
-  };
+
+  a {
+    color: ${({theme}) => theme.colors.primary};
+    font-size: 1.2vw;
+    text-decoration: none;
+  }
 `;
