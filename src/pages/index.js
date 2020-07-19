@@ -1,6 +1,7 @@
 import React from 'react';
 import { IndexPageWrapper, HeroSection, CallToAction } from '../styled';
 import { scene } from '../assets/images';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 export const Index = () => {
   return (
@@ -17,7 +18,9 @@ export const Index = () => {
           Nous vous accompagnons dans vos démarches d’expatriation en France et en Afrique 
           </p>
           <CallToAction>
-            <a href="https://app.izypaper.com">Je crée mon entreprise au pays</a>
+            <OutboundLink href="https://app.izypaper.com">
+              Je crée mon entreprise au pays
+            </OutboundLink>
           </CallToAction>
         </div>
       </HeroSection>
