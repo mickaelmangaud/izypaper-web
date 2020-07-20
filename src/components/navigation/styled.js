@@ -28,11 +28,18 @@ export const Logo = styled.div`
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: white;
-  .material-icons { color: white; font-size: 36px }; 
+  @media (max-width: 1080px) {
+    margin: 0 0 0 135px ;
+  }
   @media (max-width: 860px) {
     width: 100%;
-    margin-right: 72px;
+    margin: 0 72px 0 0;
   }
+  
+  .material-icons { 
+    color: white;
+    font-size: 36px
+  }; 
 
   a {
     color: white;
