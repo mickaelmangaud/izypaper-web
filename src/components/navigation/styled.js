@@ -22,17 +22,16 @@ export const NavigationWrapper = styled.div`
 `;
 
 export const Logo = styled.div`
-  /* margin-right: 72px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 250px; */
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
   color: white;
   .material-icons { color: white; font-size: 36px }; 
   @media (max-width: 860px) {
     width: 100%;
+    margin-right: 72px;
   }
 
   a {

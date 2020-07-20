@@ -18,6 +18,9 @@ export const Section = styled.section`
   display: flex;
   height: 100%;
   scroll-snap-align: start;
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
 `;
 
 export const HeroSection = styled(Section)`
@@ -26,12 +29,15 @@ export const HeroSection = styled(Section)`
       display: flex;
       justify-content: center;
       align-items: center;
-      /* margin-bottom: 45px; */
       @media (max-width: 860px) {
-        display: none;
+        width: 100%;
+        margin-bottom: 42px;
       }
       img { 
         max-width: 90%;
+        @media (max-width: 860px) {
+          width: 100%;
+        }
       }
     }
 
@@ -41,8 +47,8 @@ export const HeroSection = styled(Section)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin-bottom: 45px; */
     @media (max-width: 860px) {
+      flex: initial;
       justify-content: space-between;
       margin-bottom: 0;
     }
@@ -52,7 +58,8 @@ export const HeroSection = styled(Section)`
       text-align: left;
       margin-bottom: 36px;
       @media (max-width: 860px) {
-        font-size: 16vw;
+        font-size: 5vw;
+        text-align: center;
       }
     }
 
@@ -62,9 +69,10 @@ export const HeroSection = styled(Section)`
       font-family: 'Lato', sans-serif;
       margin-bottom: 5vw;
       @media (max-width: 860px) { 
-        font-size: 6vw;
+        font-size: 4vw;
         position: relative;
         bottom: 24px;
+        text-align: center;
       };
     }
   }
@@ -77,10 +85,16 @@ export const CallToAction = styled.button`
   border-radius: 40px;
   border:none;
   background-color: white;
+  @media (max-width: 860px) { 
+    width: 100%;
+  };
 
   a {
     color: ${({theme}) => theme.colors.primary};
     font-size: 1.2vw;
     text-decoration: none;
+    @media (max-width: 860px) { 
+      font-size: 3vw;
+    };
   }
 `;
