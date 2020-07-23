@@ -13,6 +13,9 @@ const BurgerWrapper = styled.div`
   align-items: center;
   margin-left: 24px;
   transform: scale(1.5);
+  @media (min-width: 1080px) {
+    display: none;  
+  }
 
   .material-icons {
     color: ${({ theme, isSideMenuVisible }) => isSideMenuVisible ? theme.colors.primary : 'white' };
