@@ -7,8 +7,6 @@ const UiContextProvider = ({ children }) => {
     loaderDisplayed: false
   });
 
-  console.log('UICONTEXT', uiContext);
-
   return (
     <UiContext.Provider value={{uiContext, setUiContext}}>
       {children}
