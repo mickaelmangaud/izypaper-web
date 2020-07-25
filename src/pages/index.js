@@ -17,7 +17,7 @@ export const Index = () => {
           </h1>
 
           <p className="description">
-            Créez votre entreprise au pays et en France sans vous déplacer 
+            Créez votre entreprise en Afrique et en France sans vous déplacer 
           </p>
 
           <CallToAction>

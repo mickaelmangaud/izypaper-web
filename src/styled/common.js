@@ -46,5 +46,6 @@ export const PageWrapper = styled.div`
   @media (max-width: 860px) {
     height: ${({theme}) => `calc(100vh - ${theme.sizes.mobileMenuHeight})`};
     margin-top:${({theme}) => theme.sizes.mobileMenuHeight};
+    padding: 24px;
   }
 `;
