@@ -3,7 +3,7 @@ import { NavigationWrapper, Logo, Menu, NavButton, MenuItem } from './styled';
 import { navLinks } from '../../utils';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
-import { SideMenu, Burger } from './index';
+import { SideMenu } from './index';
 import styled from 'styled-components';
 
 const BurgerWrapper = styled.div`
