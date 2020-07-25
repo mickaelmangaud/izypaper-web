@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export const NavigationWrapper = styled.div`
   padding: 0 24px;
@@ -88,10 +89,11 @@ export const Menu = styled.ul`
   @media (max-width: 1080px) { display: none };
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(animated.li)`
     height: 100%;
+    transition: all .3s ease;
     cursor: pointer;
-    border-bottom: ${({active}) => active ? '4px solid white' : ''};
+    border-bottom: ${({theme, active}) => active ? '4px solid white' : '1px solid ${theme.colors.primary}'};
     &:hover {
       background-color: rgba(255,255,255, .2);
     }

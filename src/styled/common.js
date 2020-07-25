@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    background-color: #eee;
+    background-color: #fff;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -32,7 +32,7 @@ export const PageWrapper = styled.div`
   background-color: #fff;
   height: ${({theme}) => `calc(100vh - ${theme.sizes.menuHeight})`};
   margin-top: ${({theme}) => theme.sizes.menuHeight};
-  animation: ${rotate} .1s ease;
+  animation: ${rotate} .3s ease;
   padding: 36px;
   overflow-y: scroll;
   font-family: 'Ubuntu', sans-serif;

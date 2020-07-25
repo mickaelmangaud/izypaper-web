@@ -4,6 +4,7 @@ import { navLinks } from '../../utils';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { SideMenu } from './index';
+import { useSpring } from 'react-spring';
 
 const Navigation = () => {
   const location = useLocation();
