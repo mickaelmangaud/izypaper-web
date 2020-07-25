@@ -1,37 +1,9 @@
 import React from 'react';
-import { NavigationWrapper, Logo, Menu, NavButton, MenuItem } from './styled';
+import { NavigationWrapper, Logo, Menu, NavButton, MenuItem, BurgerWrapper } from './styled';
 import { navLinks } from '../../utils';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
 import { SideMenu } from './index';
-import styled from 'styled-components';
-
-const BurgerWrapper = styled.div`
-  z-index: 20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 24px;
-  transform: scale(1.5);
-  @media (min-width: 1080px) {
-    display: none;  
-  }
-
-  .material-icons {
-    color: ${({ theme, isSideMenuVisible }) => isSideMenuVisible ? theme.colors.primary : 'white' };
-    padding: 6px;
-    overflow: visible;
-    font-size: 1.5rem;
-    text-align: center;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    border-radius: 50%;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
-    }
-  }
-`;
-
-
 
 const Navigation = () => {
   const location = useLocation();

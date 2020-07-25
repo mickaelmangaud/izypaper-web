@@ -10,13 +10,16 @@ export const Index = () => {
         <div className="left">
           <img src={scene} alt="hero-scene"/>
         </div>
+
         <div className="right">
           <h1 className="one-sentence">
-            Le service juridique et administratif des entrepreneurs expatriés
+            Le service juridique et administratif des entrepreneurs étrangers et de la Diaspora
           </h1>
+
           <p className="description">
-          Nous vous accompagnons dans vos démarches d’expatriation en France et en Afrique 
+            Créez au pays et en France sans vous déplacer 
           </p>
+
           <CallToAction>
             <OutboundLink href="https://app.izypaper.com">
               Je crée mon entreprise au pays
