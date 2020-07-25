@@ -6,7 +6,7 @@ export default {
       turquoise: 'rgb(64,224,208)',
   },
   sizes: {
-      menuHeight: '90px',
+      menuHeight: '80px',
       mobileMenuHeight: '72px',
       sideMenuWidth: '300px',
   }
