@@ -20,6 +20,7 @@ export const Section = styled.section`
   scroll-snap-align: start;
   @media (max-width: 860px) {
     flex-direction: column;
+    padding: 5%;
   }
 `;
 
@@ -31,12 +32,12 @@ export const HeroSection = styled(Section)`
       align-items: center;
       @media (max-width: 860px) {
         width: 100%;
-        margin-bottom: 42px;
+        // margin-bottom: 42px;
       }
       img { 
         max-width: 90%;
         @media (max-width: 860px) {
-          width: 100%;
+          width: 75%;
         }
       }
     }
@@ -48,18 +49,19 @@ export const HeroSection = styled(Section)`
     flex-direction: column;
     justify-content: center;
     @media (max-width: 860px) {
-      flex: initial;
-      justify-content: space-between;
+      flex: 2;
       margin-bottom: 0;
+      justify-content: flex-start;
     }
     
     .one-sentence {
       font-size: 2.5vw;
       text-align: left;
-      margin-bottom: 36px;
+      margin-bottom: 5vw;
       @media (max-width: 860px) {
         font-size: 5vw;
         text-align: center;
+        margin-bottom: 24px;
       }
     }
 
@@ -71,7 +73,6 @@ export const HeroSection = styled(Section)`
       @media (max-width: 860px) { 
         font-size: 4vw;
         position: relative;
-        bottom: 24px;
         text-align: center;
       };
     }

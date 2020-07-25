@@ -7,7 +7,7 @@ export default {
   },
   sizes: {
       menuHeight: '80px',
-      mobileMenuHeight: '72px',
+      mobileMenuHeight: '62px',
       sideMenuWidth: '300px',
   }
 };
