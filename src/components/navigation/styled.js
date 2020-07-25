@@ -72,7 +72,7 @@ export const Logo = styled.div`
     text-decoration: none;
     font-size: 38px;
     @media (max-width: 860px) {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
 `;
