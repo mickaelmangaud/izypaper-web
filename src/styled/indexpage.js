@@ -52,6 +52,8 @@ export const HeroSection = styled(Section)`
       flex: 2;
       margin-bottom: 0;
       justify-content: flex-start;
+      align-items: center;
+      padding-top: 5%;  
     }
     
     .one-sentence {
@@ -62,6 +64,7 @@ export const HeroSection = styled(Section)`
         font-size: 5vw;
         text-align: center;
         margin-bottom: 24px;
+        width: 80%;
       }
     }
 
@@ -74,6 +77,8 @@ export const HeroSection = styled(Section)`
         font-size: 4vw;
         position: relative;
         text-align: center;
+        width: 85%;
+        margin-bottom: 24px;
       };
     }
   }
@@ -88,6 +93,7 @@ export const CallToAction = styled.button`
   background-color: white;
   @media (max-width: 860px) { 
     width: 100%;
+    margin: 24px;
   };
 
   a {
