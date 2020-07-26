@@ -43,7 +43,7 @@ export const PageWrapper = styled.div`
     outline: 1px solid slategrey;
     border-radius: 5px;
   }
-  @media (max-width: 860px) {
+  @media (max-width: 760px) {
     height: ${({theme}) => `calc(100vh - ${theme.sizes.mobileMenuHeight})`};
     margin-top:${({theme}) => theme.sizes.mobileMenuHeight};
     padding: 0;

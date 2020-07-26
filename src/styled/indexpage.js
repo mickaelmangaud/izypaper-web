@@ -18,7 +18,7 @@ export const Section = styled.section`
   display: flex;
   height: 100%;
   scroll-snap-align: start;
-  @media (max-width: 860px) {
+  @media (max-width: 760px) {
     flex-direction: column;
     padding: 5%;
   }
@@ -30,13 +30,13 @@ export const HeroSection = styled(Section)`
       display: flex;
       justify-content: center;
       align-items: center;
-      @media (max-width: 860px) {
+      @media (max-width: 760px) {
         width: 100%;
         // margin-bottom: 42px;
       }
       img { 
         max-width: 90%;
-        @media (max-width: 860px) {
+        @media (max-width: 760px) {
           width: 75%;
         }
       }
@@ -48,7 +48,7 @@ export const HeroSection = styled(Section)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media (max-width: 860px) {
+    @media (max-width: 760px) {
       flex: 2;
       margin-bottom: 0;
       justify-content: flex-start;
@@ -60,11 +60,10 @@ export const HeroSection = styled(Section)`
       font-size: 2.5vw;
       text-align: left;
       margin-bottom: 5vw;
-      @media (max-width: 860px) {
+      @media (max-width: 760px) {
         font-size: 5vw;
         text-align: center;
         margin-bottom: 24px;
-        width: 80%;
       }
     }
 
@@ -73,7 +72,7 @@ export const HeroSection = styled(Section)`
       text-align: left;
       font-family: 'Lato', sans-serif;
       margin-bottom: 5vw;
-      @media (max-width: 860px) { 
+      @media (max-width: 760px) { 
         font-size: 4vw;
         position: relative;
         text-align: center;
@@ -91,17 +90,16 @@ export const CallToAction = styled.button`
   border-radius: 40px;
   border:none;
   background-color: white;
-  @media (max-width: 860px) { 
-    width: 100%;
-    margin: 24px;
+  @media (max-width: 760px) { 
+    padding: 18px 22px;
   };
 
   a {
     color: ${({theme}) => theme.colors.primary};
     font-size: 1.2vw;
     text-decoration: none;
-    @media (max-width: 860px) { 
-      font-size: 3vw;
+    @media (max-width: 760px) { 
+      font-size: 4vw;
     };
   }
 `;

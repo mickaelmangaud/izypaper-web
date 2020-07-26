@@ -14,7 +14,7 @@ export const NavigationWrapper = styled.div`
   top: 0;
   box-shadow: 1px 1px 5px 1px rgba(0,0,0, 0.2);
   border: none;
-  @media (max-width: 860px) {
+  @media (max-width: 760px) {
     height:${({theme}) => theme.sizes.mobileMenuHeight};
   }
   @media (max-width: 1080px) {
@@ -57,7 +57,7 @@ export const Logo = styled.div`
   @media (max-width: 1080px) {
     margin: 0 0 0 135px ;
   }
-  @media (max-width: 860px) {
+  @media (max-width: 760px) {
     width: 100%;
     margin: 0 72px 0 0;
   }
@@ -71,7 +71,7 @@ export const Logo = styled.div`
     color: white;
     text-decoration: none;
     font-size: 38px;
-    @media (max-width: 860px) {
+    @media (max-width: 760px) {
       font-size: 24px;
     }
   }
@@ -125,7 +125,7 @@ export const NavButton = styled.a`
   height: 40px;
   border-radius: 40px;
   text-decoration: none;
-  @media (max-width: 860px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `;
