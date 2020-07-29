@@ -33,7 +33,7 @@ export const PageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  background-color: ${({theme}) => theme.colors.primary};
+  background-color: #048B9A;
   color: white;
   background-image: url(${background});
   background-position: center center;
