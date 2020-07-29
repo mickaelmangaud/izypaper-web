@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    background-color: ${({theme}) => theme.colors.primary};
+    background-color: #048B9A;
     height: 100vh;
     overflow: hidden;
     position: relative;
