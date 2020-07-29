@@ -4,7 +4,6 @@ import { background } from '../assets/images';
 
 export const IndexPageWrapper = styled(PageWrapper)`
   background-color: ${({theme}) => theme.colors.primary};
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
   color: white;
   background-image: url(${background});
@@ -17,7 +16,6 @@ export const Section = styled.section`
   padding: 10%;
   display: flex;
   height: 100%;
-  scroll-snap-align: start;
   @media (max-width: 760px) {
     flex-direction: column;
     padding: 5%;

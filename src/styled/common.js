@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
+import { background } from '../assets/images';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -11,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    background-color: #fff;
+    background-color: ${({theme}) => theme.colors.primary};
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -28,8 +29,16 @@ export const rotate = keyframes`
 `;
 
 export const PageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  background-color: #fff;
+  background-color: ${({theme}) => theme.colors.primary};
+  color: white;
+  background-image: url(${background});
+  background-position: center center;
+  background-size: cover;
+  padding: 0;
   height: ${({theme}) => `calc(100vh - ${theme.sizes.menuHeight})`};
   margin-top: ${({theme}) => theme.sizes.menuHeight};
   animation: ${rotate} .3s ease;
@@ -48,4 +57,7 @@ export const PageWrapper = styled.div`
     margin-top:${({theme}) => theme.sizes.mobileMenuHeight};
     padding: 0;
   }
+
+  //
+  font-size: 54px;
 `;

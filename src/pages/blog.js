@@ -4,7 +4,7 @@ import { PageWrapper } from '../styled';
 export default () => {
   return (
     <PageWrapper>
-      Blog
+      Bientôt
     </PageWrapper>
   )
 }

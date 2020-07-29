@@ -3,6 +3,7 @@ import { IndexPageWrapper, HeroSection, CallToAction } from '../styled';
 import { scene } from '../assets/images';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
+
 export const Index = () => {
   return (
     <IndexPageWrapper>

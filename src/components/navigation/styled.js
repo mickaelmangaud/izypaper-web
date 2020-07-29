@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { animated } from 'react-spring';
 
 export const NavigationWrapper = styled.div`
   padding: 0 24px;
@@ -89,7 +88,7 @@ export const Menu = styled.ul`
   @media (max-width: 1080px) { display: none };
 `;
 
-export const MenuItem = styled(animated.li)`
+export const MenuItem = styled.li`
     height: 100%;
     transition: all .3s ease;
     cursor: pointer;
